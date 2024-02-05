@@ -5,9 +5,11 @@ import ForgotPassword from "./pages/ForgotPassword"
 import SignIn from "./pages/SignIn"
 import SignUP from "./pages/SignUP"
 import Offers from "./pages/Offers"
+import Header from "./components/Header";
 function App() {
   return (
    <Router>
+    <Header/>
     <Routes>
        < Route path ="/" element ={<Home/>}/>
        < Route path ="/Profile" element ={<Profile/>}/>
