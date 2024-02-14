@@ -52,7 +52,6 @@ export default function Profile() {
         <h1 className="text-3xl text-center mt-6 font-bold">My Profile</h1>
         <div className="w-full md:w-[50%] mt-6 px-3">
           <form>
-          
             <input
               type="text"
               id="name"
