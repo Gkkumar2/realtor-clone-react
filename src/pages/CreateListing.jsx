@@ -58,14 +58,14 @@ export default function CreateListing() {
     if (e.target.value === "false") {
       boolean = false;
     }
-    // Files
+    
     if (e.target.files) {
       setFormData((prevState) => ({
         ...prevState,
         images: e.target.files,
       }));
     }
-    // Text/Boolean/Number
+  
     if (!e.target.files) {
       setFormData((prevState) => ({
         ...prevState,
@@ -118,8 +118,7 @@ export default function CreateListing() {
         uploadTask.on(
           "state_changed",
           (snapshot) => {
-            // Observe state change events such as progress, pause, and resume
-            // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+
             const progress =
               (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log("Upload is " + progress + "% done");
@@ -160,6 +159,7 @@ export default function CreateListing() {
       imgUrls,
       geolocation,
       timestamp: serverTimestamp(),
+      userRef:auth.currentUser.uid
     };
     delete formDataCopy.images;
     !formDataCopy.offer && delete formDataCopy.discountedPrice;
@@ -249,7 +249,7 @@ export default function CreateListing() {
             <p className="text-lg font-semibold">Baths</p>
             <input
               type="number"
-              id="bedrooms"
+              id="bathroom"
               value={bathroom}
               onChange={onChange}
               min="1"
