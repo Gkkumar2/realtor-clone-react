@@ -130,7 +130,7 @@ export default function Profile() {
         {!loading && listing.length > 0 && (
           <>
             <h2 className="text-2xl text-center font-semibold">My Listings</h2>
-            <ul>
+            <ul className="sm:grid sm:grid-cols-2 lg:grid-col-3 xl:grid-cols-4 2xl-grid-cols-5 mt-6 mb-6">
               {listing.map((listing) => (
                 <ListingItem
                   key={listing.id}
