@@ -10,6 +10,7 @@ import ListingItem from "../components/listingItem";
 
 
 
+
 export default function Profile() {
   const auth = getAuth();
   const navigate = useNavigate();
